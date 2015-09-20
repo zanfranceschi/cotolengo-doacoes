@@ -5,11 +5,11 @@ from setuptools import setup
 
 setup(
     # GETTING-STARTED: set your app name:
-    name=u'Cotolengo Doações',
+    name='cotolengo_doacoes',
     # GETTING-STARTED: set your app version:
     version='1.0',
     # GETTING-STARTED: set your app description:
-    description=u'Cotolengo Doações',
+    description= 'Cotolengo Doacoes',
     # GETTING-STARTED: set author name (your name):
     author='Francisco Zanfranceschi',
     # GETTING-STARTED: set author email (your email):
