@@ -20,7 +20,7 @@ setup(
     install_requires=[
          'Django==1.8.4'
 		,'Pillow==2.9.0'
-		,'argparse==1.2.1'
+		#,'argparse==1.2.1'
 		,'django-admin-bootstrapped==2.5.5'
 		,'requests==2.7.0'
 		,'six==1.9.0'
