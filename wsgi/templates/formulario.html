@@ -1,0 +1,100 @@
+{% extends "_base.html" %}
+{% load staticfiles %}
+{% block conteudo %}
+
+<div class="jumbotron">
+	<h1>{{ unidade.nome }}</h1>
+	<img src="{% static 'img/logo.png' %}" />
+	<h2>Faça uma doação e ajude-nos a ajudar</h2>
+</div>
+
+<h1>Formulário para Doação</h1>
+
+<p>Os campos marcados com '*' são de preenchimento obrigatório.</p>
+
+<p class="">Por favor, note que é importante que os itens que desejar doar estejam em bom estado. Nossa principal fonte de renda são as doações e nós não temos meios para consertar um aparelho quebrado ou costurar uma roupa, por exemplo.</p>
+
+<form method="post" data-toggle="validator" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+	<div class="form-group">
+		<label for="doacao_doacao">Doação *</label>
+		<textarea id="doacao_doacao" name="doacao_doacao" class="form-control" rows="4" required></textarea>
+		<p class="help-block">Descreva o que deseja doar.</p>
+	</div>
+
+	<div class="form-group">
+		<label for="doacao_foto">Foto da doação</label>
+		<input type="file" class="form-control" id="doacao_foto" name="doacao_foto">
+		<p class="help-block">Adicione uma foto da doação para podermos nos organizar melhor em relação ao transporte e a condição da doação.</p>
+	</div>
+
+	<div class="form-group">
+		<label for="doacao_observacoes">Observações</label>
+		<textarea id="doacao_observacoes" name="doacao_observacoes" class="form-control" rows="4"></textarea>
+		<p class="help-block">Se desejar, insira o melhor horário/dia para a retirada da doação. Fique à vontade para colocar outras observações também.</p>
+	</div>
+
+	<div class="form-group">
+		<label for="endereco_logradouro">Endereço *</label>
+		<input type="text" class="form-control" id="endereco_logradouro" name="endereco_logradouro" required>
+	</div>
+
+	<div class="form-group">
+		<label for="endereco_complemento">Complemento</label>
+		<input type="text" class="form-control" id="endereco_complemento" name="endereco_complemento">
+	</div>
+
+	<div class="form-group">
+		<label for="endereco_bairro">Bairro</label>
+		<input type="text" class="form-control" id="endereco_bairro" name="endereco_bairro">
+	</div>
+
+	<div class="form-group">
+		<label for="endereco_cep">CEP</label>
+		<input type="text" class="form-control" id="endereco_cep" name="endereco_cep">
+	</div>
+
+	<div class="form-group">
+		<label for="endereco_cidade">Cidade *</label>
+		<input type="text" class="form-control" id="endereco_cidade" name="endereco_cidade" required>
+	</div>
+
+	<div class="form-group">
+		<label for="endereco_referencia">Referência para o endereço</label>
+		<input type="text" class="form-control" id="endereco_referencia" name="endereco_referencia">
+		<p class="help-block">Insira uma referência para ajudar-nos a chegar em seu endereço para a retirada da doação.</p>
+	</div>
+
+
+	<!-- doador -->
+	<div class="form-group">
+		<label for="doador_nome">Nome *</label>
+		<input type="text" class="form-control" id="doador_nome" name="doador_nome" required>
+	</div>
+	
+	<div class="form-group">
+		<label for="doador_email">Email</label>
+		<input type="email" class="form-control" id="doador_email" name="doador_email">
+	</div>
+
+	<div class="form-group">
+		<label for="doador_telefone">Telefone</label>
+		<input type="text" class="form-control" id="doador_telefone" name="doador_telefone">
+	</div>
+
+    <button type="submit" class="btn btn-lg btn-success">Cadastrar doação</button>
+
+</form>
+
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/validator.min.js' %}"></script>
+{% endblock %}
+

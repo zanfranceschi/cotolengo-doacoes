@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+{% load staticfiles %}
+{% block conteudo %}
+<div class="jumbotron">
+	<h1>Faça uma Doação</h1>
+	<img src="{% static 'img/logo.png' %}" />
+	<h2>E Ajude-Nos A Ajudar</h2>
+</div>
+
+<h1>Escolha a unidade para fazer uma doação</h1>
+
+<div class="row marketing">
+	<div class="col-lg-6">
+		{% for unidade in unidades %}
+		<h4>{{ unidade.nome }}</h4>
+		<p><a href="/{{ unidade.sigla }}/">{{ unidade.nome }} - {{ unidade.sigla }}</a></p>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}   

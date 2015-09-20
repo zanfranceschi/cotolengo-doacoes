@@ -1,0 +1,11 @@
+{% extends "_base.html" %}
+{% load staticfiles %}
+{% block conteudo %}
+<div class="jumbotron">
+	<h1>Muito Obrigado!</h1>
+	<img src="{% static 'img/logo.png' %}" />
+	<h2>Recebemos o registro da sua doação e iremos buscá-la em breve.</h2>
+	<br />
+	<p>Se desejar, você poderá voltar para o <a href="{{ unidade.url_institucional }}">site do {{ unidade.nome }}</a>.</p>
+</div>
+{% endblock %}
