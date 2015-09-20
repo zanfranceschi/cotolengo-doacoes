@@ -55,5 +55,4 @@ docs/_build/
 
 # PyBuilder
 target/
-/wsgi/cotolengo/settings_env.py
 /wsgi/db.sqlite3
