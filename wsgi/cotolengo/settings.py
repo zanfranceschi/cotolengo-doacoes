@@ -61,11 +61,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-	os.path.join(BASE_DIR, "static"),
-	'/var/www/static/',
-	'/var/lib/openshift/55f8e14a7628e160a5000035/app-root/runtime/repo/wsgi/static/',
-)
+#STATICFILES_DIRS = (
+#	os.path.join(BASE_DIR, "static"),
+	#'/var/www/static/',
+	#'/var/lib/openshift/55f8e14a7628e160a5000035/app-root/runtime/repo/wsgi/static/',
+#)
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "doacoes/static/")

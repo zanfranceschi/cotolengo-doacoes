@@ -10,9 +10,9 @@
 #fi
 
 # GETTING-STARTED: change 'cotolengo' to your project name:
-#echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py migrate --noinput'"
+echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py migrate --noinput'"
 # GETTING-STARTED: change 'cotolengo' to your project name:
-#python "$OPENSHIFT_REPO_DIR"wsgi/manage.py migrate --noinput
+python "$OPENSHIFT_REPO_DIR"wsgi/manage.py migrate --noinput
 
 # GETTING-STARTED: change 'cotolengo' to your project name:
 #echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py collectstatic --noinput'"
